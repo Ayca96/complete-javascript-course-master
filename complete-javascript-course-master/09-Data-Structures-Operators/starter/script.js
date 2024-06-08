@@ -27,3 +27,82 @@ const restaurant = {
     },
   },
 };
+
+
+
+const airline = "TAP Air Portugal";
+// const plane = "A320";
+
+// console.log(plane[0]);
+// console.log(plane[1]);
+// console.log(plane[2]);
+
+// console.log("B737" [0]); //B
+// console.log("B737".length); // 4
+// console.log(airline.length); // 16
+
+// console.log(airline.indexOf("r")); // 6
+// console.log(airline.lastIndexOf("a")); // 14
+// console.log(airline.indexOf("A")); // case sensitive var.
+// console.log(airline.indexOf("a")); // 14
+
+// console.log(airline.indexOf("Portugal")); // 8
+// console.log(airline.indexOf("portugal")); // -1 dizede bulamadi.
+
+// console.log(airline.slice(4)); //Air Portugal
+// console.log(airline.slice(4,7)); // Air
+
+// console.log(airline.slice(0,airline.indexOf(' '))); // TAP
+// console.log(airline.slice(airline.lastIndexOf(' ') + 1)); // Portugal
+
+//console.log(airline.slice(-2)); // al 
+//console.log(airline.slice(1, -1)); //  AP Air Portuga
+
+// const checkMiddleSeat = function (seat) 
+// // B and E are middle seats
+// const s = seat.slice(-1);
+
+// if(s === 'B' || s ==='E'){
+//   console.log("You got the middle seat. 😒");
+// }
+//   else { console.log("You got lucky. 😎");}
+
+// }
+
+// checkMiddleSeat("11B");
+// checkMiddleSeat("23C");
+// checkMiddleSeat("3E");
+ 
+console.log(airline.toLowerCase()); // tap air portugal
+console.log(airline.toUpperCase()); // TAP AIR PORTUGAL
+console.log("Ayca".toUpperCase()); // AYCA
+
+const passenger = "jOnAS";
+
+const passengerLower = passenger.toLowerCase();
+const passengerCorrect = passengerLower[0].toUpperCase() + passengerLower.slice(1);
+console.log(passengerCorrect); // Jonas
+
+//todo Comparing(karsilastirma) emails
+
+const email = "hello@jonas.io";
+const loginEmail = "  Hello@Jonas.Io \n";
+
+// const lowerEmail = loginEmail.toLowerCase();
+// const trimmedEmail = lowerEmail.trim();
+// console.log(trimmedEmail); //hello@jonas.io
+
+const normalizedEmail = loginEmail.toLowerCase().trim();
+console.log(normalizedEmail); //hello@jonas.io
+console.log(email === normalizedEmail); //true
+
+//todo Replacing
+
+const priceGB = "288,97£"  // £ bu isareti alt+156 yaparak yaptim.
+const priceUS = priceGB.replace("£", "$").replace("," ,".");
+console.log(priceUS); // 288.97$
+
+const announcement = "All passengers come to boarding door 23.Boarding door 23!";
+console.log(announcement.replace("door", "gate")); //All passengers come to boarding gate 23.Boarding door 23!
+console.log(announcement.replaceAll("door", "gate")); //All passengers come to boarding gate 23.Boarding gate 23!
+
