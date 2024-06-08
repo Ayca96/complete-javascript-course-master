@@ -72,24 +72,27 @@ console.log(amplitude);
 // const amplitudeNew = calcTempAmplitudeNew([3,5,1], [9,0,5]);
 // console.log(amplitudeNew);
 
+///////////////////////////////////////
+// Debugging with the Console and Breakpoints
+const measureKelvin = function () {
+  const measurement = {
+    type: 'temp',
+    unit: 'celsius',
 
-function multiply (factor, ...numbers){
+    // C) FIX
+    // value: Number(prompt('Degrees celsius:')),
+    value: 10,
+  }
 
-  return numbers.map(num => num * factor);
-}
-const result = multiply(2,3,4,5);
-console.log(result);
+ // B) FIND
+ console.table(measurement);
 
-function greet ({name , age}) {
-return `Hello, ${name} You are  ${age} years old.`
-}
+ // console.log(measurement.value);
+ // console.warn(measurement.value);
+ // console.error(measurement.value);
 
-const person = {name: "ayca", age:28}
-
-const greeting = greet(person)
-console.log(greeting);
-
-let object ={ "myName": "Ayca", "myAge":28}
-let obejctTwo ={"MyAge":675};
-let newObject ={...object,...obejctTwo}
-console.log(newObject);
+ const kelvin = measurement.value + 273;
+ return kelvin;
+};
+// A) IDENTIFY
+console.log(measureKelvin());
