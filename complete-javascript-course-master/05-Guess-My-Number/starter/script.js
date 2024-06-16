@@ -17,9 +17,14 @@
 //Burda ekranda degisir ama consol yapmadigimiz icin consolda görmeyiz tek fark bu.
 //});
 
-document.querySelector(".check").addEventListener("click", function (){
+let secretNumber = Math.trunc(Math.random() * 20) + 1;
+let score = 20;
+let highscore = 0;
 
-  const guess = Number(document.querySelector(".guess").value)
-  console.log(guess, typeof guess); // stringti basina Number ekleyerek number a cevirdik.
- 
-  });
+const displayMessage = function (message) {
+  document.querySelector('.message').textContent = message;
+};
+
+document.querySelector('.check').addEventListener('click', function () {
+  const guess = Number(document.querySelector('.guess').value);
+  console.log(guess, typeof guess);
